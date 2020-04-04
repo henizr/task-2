@@ -11,7 +11,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: 'app.js',
     },
     module:{
         rules: [
@@ -23,6 +23,17 @@ module.exports = {
                     },
                     {
                         loader: 'pug-html-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.(ttf|woff|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'fonts',
+                          },
                     },
                 ],
             },

@@ -9,7 +9,7 @@ module.exports = {
     entry: path.resolve(__dirname, 'src'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: 'app.js',
     },
     module:{
         rules: [
@@ -21,6 +21,17 @@ module.exports = {
                     },
                     {
                         loader: 'pug-html-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.(ttf|woff|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'fonts',
+                          },
                     },
                 ],
             },
@@ -46,11 +57,11 @@ module.exports = {
     plugins:[
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: 'styles.css',
         }),
         new HtmlWebpackPlugin({
-             filename: 'index.html',
-             template: './src/blocks/index.pug',
-        }),
+            filename: 'index.html',
+            template:'./src/pages/colors-and-types/colors-and-types.pug',
+       }),
     ],
 };
