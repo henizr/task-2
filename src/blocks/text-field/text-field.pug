@@ -1,0 +1,27 @@
+include ../text-input/text-input
+
+//-
+  Опции миксина text-field:
+
+    options.hasHeaderDescription - Наличие описания (boolean)
+    options.hasHeader - Наличие заголовка (boolean)
+    options.description -  Описание (string)
+    options.header -  Заголовок (string)
+    options.placeholder - Текст placeholder-а (string) 
+    options.value - Значение по умолчанию (string)
+
+  Пример использования:
+
+    +text-field({ 
+    hasHeaderDescription: true,
+    hasHeader: true,
+    description: 'default', 
+    header: 'text field', 
+                placeholder: 'email', 
+                condition: '',
+                value: ''})      
+
+mixin text-field(options)
+    .text-field
+        div(class=`${options.condition==='hovered-focused'?'text-field__text-input text-field__text-input_hovered-focused':'text-field__text-input'}`)
+            +text-input({ placeholder: options.placeholder, value: options.value, classes: options.classes })

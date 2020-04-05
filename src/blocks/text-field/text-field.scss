@@ -1,0 +1,17 @@
+@import '../../sass/variables';
+
+.text-field{
+    width: 100%;
+}
+.text-field__text-input{
+    margin-top: 5px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    &:hover,
+    &:focus-within{
+        border: 1px solid $dark-shade-50;
+    }
+}
+.text-field__text-input_hovered-focused{
+    border-color: $dark-shade-50;
+}

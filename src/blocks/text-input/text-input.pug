@@ -1,0 +1,10 @@
+//-
+  Опции миксина text-input:
+    
+    options.classes - дополнительные классы, передаваемые в блок (string)
+    options.placeholder - текст placeholder-а в input-е (string) 
+    options.value - значение input-а (string)  
+    options.type - тип input-а (string)
+
+mixin text-input(options)
+    input(class=`${options.classes} text-input`, type=options.type, placeholder=options.placeholder, value=options.value)

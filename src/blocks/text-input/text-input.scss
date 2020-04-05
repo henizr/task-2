@@ -1,0 +1,20 @@
+@import '../../sass/variables';
+
+.text-input{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    color: $dark-shade-75;
+    width: 100%;
+    line-height: 42px;
+    padding: 0 14px;
+    border: 0;
+    background: #FFFFFF;
+    border-radius: inherit;
+    outline: none;
+    &::placeholder{
+        color: $dark-shade-25;
+        text-transform: capitalize;
+    }
+}
