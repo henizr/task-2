@@ -1,0 +1,52 @@
+@import '../../sass/variables';
+
+.color-sections{
+    display: flex;
+    margin-bottom: 20px;
+}
+.color-sections__color{
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.color-sections__color_theme_dark-shade-100{
+    background-color: $dark-shade-100;
+}
+.color-sections__color_theme_dark-shade-75{
+    background-color: $dark-shade-75;
+}
+.color-sections__color_theme_dark-shade-50{
+    background-color: $dark-shade-50;
+}
+.color-sections__color_theme_dark-shade-25{
+    background-color: $dark-shade-25;
+}
+.color-sections__color_theme_dark-shade-5{
+    background-color: $dark-shade-5;
+}
+.color-sections__color_theme_purple{
+    background-color: $purple;
+}
+.color-sections__color_theme_green{
+    background-color: $green;
+}
+.color-sections__description{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     font-size: 19px;
+     font-family: Quicksand;
+     font-style: normal;
+     font-weight: bold;
+     margin-left: 40px;
+}
+.color-sections__caption{
+    margin: 0;
+    margin-bottom: 5px;
+    
+}
+.color-sections__hex-value{
+     font-weight: normal;
+     margin: 0;
+}

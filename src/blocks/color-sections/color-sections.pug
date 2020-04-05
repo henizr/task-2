@@ -1,0 +1,14 @@
+mixin color-sections(items)
+    - const colors = {'Dark Shade 100%': 'color-sections__color color-sections__color_theme_dark-shade-100',
+    - 'Dark Shade 75%': 'color-sections__color color-sections__color_theme_dark-shade-75',
+    - 'Dark Shade 50%': 'color-sections__color color-sections__color_theme_dark-shade-50',
+    - 'Dark Shade 25%': 'color-sections__color color-sections__color_theme_dark-shade-25',
+    - 'Dark Shade 5%': 'color-sections__color color-sections__color_theme_dark-shade-5',
+    - 'Purple': 'color-sections__color color-sections__color_theme_purple',
+    - 'Green': 'color-sections__color color-sections__color_theme_green'};
+    each item in items
+        .color-sections
+            div(class=`${colors[item[0]]}`)
+            .color-sections__description
+                p(class="color-sections__caption") #{item[0]}
+                p(class="color-sections__hex-value") #{item[1]}

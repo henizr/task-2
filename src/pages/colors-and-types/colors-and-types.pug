@@ -1,7 +1,17 @@
+include ../../blocks/color-sections/color-sections
+
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body
+        title Colors and types
+    body(class="colors-and-types")
+        +color-sections([
+                ['Dark Shade 100%', '#1F2041'], 
+                ['Dark Shade 75%', '#1F2041'],
+                ['Dark Shade 50%', '#1F2041'], 
+                ['Dark Shade 25%', '#1F2041'],
+                ['Dark Shade 5%', '#1F2041'],
+                ['Purple', '#BC9CFF'],
+                ['Green', '#6FCF97'],])
