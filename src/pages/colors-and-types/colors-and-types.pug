@@ -1,4 +1,6 @@
 include ../../blocks/color-sections/color-sections
+include ../../blocks/type-sections/type-sections
+
 
 <!DOCTYPE html>
 html(lang="en")
@@ -7,11 +9,14 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Colors and types
     body(class="colors-and-types")
-        +color-sections([
-                ['Dark Shade 100%', '#1F2041'], 
-                ['Dark Shade 75%', '#1F2041'],
-                ['Dark Shade 50%', '#1F2041'], 
-                ['Dark Shade 25%', '#1F2041'],
-                ['Dark Shade 5%', '#1F2041'],
-                ['Purple', '#BC9CFF'],
-                ['Green', '#6FCF97'],])
+        .colors-and-types__color-sections
+            +color-sections([
+                    ['Dark Shade 100%', '#1F2041'], 
+                    ['Dark Shade 75%', '#1F2041'],
+                    ['Dark Shade 50%', '#1F2041'], 
+                    ['Dark Shade 25%', '#1F2041'],
+                    ['Dark Shade 5%', '#1F2041'],
+                    ['Purple', '#BC9CFF'],
+                    ['Green', '#6FCF97'],])
+        .colors-and-types__type-sections            
+            +type-sections

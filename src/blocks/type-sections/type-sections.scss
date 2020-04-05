@@ -1,0 +1,95 @@
+@import '../../sass/variables';
+
+.type-sections{
+    &__item{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 50px;
+    }
+    &__h1-caption{
+        font-family: Montserrat;
+        font-weight: normal;
+        margin: 0;
+        flex-basis: 40px;
+        text-align: right;
+        margin-right: 30px;
+        font-size: 24px;
+        line-height: 29px;
+        color: $dark-shade-25;
+    }
+    &__h1-description{
+        margin: 0;
+        flex-basis: 317px;
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        color: $dark-shade-100;
+    }
+    &__h2-caption{
+        font-family: Montserrat;
+        font-weight: normal;
+        margin: 0;
+        flex-basis: 40px;
+        text-align: right;
+        margin-right: 30px;
+        font-size: 19px;
+        line-height: 23px;
+        color: $dark-shade-25;
+    }
+    &__h2-description{
+        margin: 0;
+        flex-basis: 317px;  
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+        color: $dark-shade-100;
+    }
+    &__h3-caption{
+        font-family: Montserrat;
+        font-weight: normal;
+        margin: 0;
+        flex-basis: 40px;
+        text-align: right;
+        margin-right: 30px;
+        font-size: 12px;
+        line-height: 15px;
+        color: $dark-shade-25;
+     
+    }
+    &__h3-description{
+        margin: 0;
+        flex-basis: 317px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: $dark-shade-100;
+        text-transform: uppercase;
+    } 
+    &__body-caption{
+        font-family: Montserrat;
+        font-weight: normal;
+        margin: 0;
+        flex-basis: 40px;
+        text-align: right;
+        margin-right: 30px;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-shade-25;
+    }
+    &__body-description{
+        margin: 0;
+        flex-basis: 317px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-shade-75;
+    }
+}
