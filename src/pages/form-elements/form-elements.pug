@@ -5,13 +5,16 @@ html(lang="en", class="root")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
         title Form elements
     body(class="form-elements")
-        +text-field({hasHeaderDescription: true,
-                    hasHeader: true,
-                    description: 'default', 
-                    header: 'text field', 
-                    placeholder: 'email', 
-                    condition: '',
-                    value: '',
-                    classes: ''})  
+        .form-elements__col-1
+            +text-field({hasHeaderDescription: true,
+                        hasHeader: true,
+                        description: 'default', 
+                        header: 'text field', 
+                        placeholder: 'email', 
+                        condition: '',
+                        type: 'email',
+                        value: '',
+                        classes: ''})  

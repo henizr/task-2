@@ -9,6 +9,7 @@ include ../header-element/header-element
     options.header -  Заголовок (string)
     options.placeholder - Текст placeholder-а (string) 
     options.value - Значение по умолчанию (string)
+    options.type - Тип input- a (string)
 
   Пример использования:
 
@@ -19,10 +20,11 @@ include ../header-element/header-element
     header: 'text field', 
                 placeholder: 'email', 
                 condition: '',
+                type: 'email'
                 value: ''})      
 
 mixin text-field(options)
     .text-field
         +header-element( { hasHeaderDescription: options.hasHeaderDescription, description: options.description, header: options.header } )
         div(class=`${options.condition==='hovered-focused'?'text-field__text-input text-field__text-input_hovered-focused':'text-field__text-input'}`)
-            +text-input({ placeholder: options.placeholder, value: options.value, classes: options.classes })
+            +text-input({ placeholder: options.placeholder, type: options.type, value: options.value, classes: options.classes })
