@@ -1,5 +1,5 @@
 include ../text-input/text-input
-
+include ../header-element/header-element
 //-
   Опции миксина text-field:
 
@@ -23,5 +23,6 @@ include ../text-input/text-input
 
 mixin text-field(options)
     .text-field
+        +header-element( { hasHeaderDescription: options.hasHeaderDescription, description: options.description, header: options.header } )
         div(class=`${options.condition==='hovered-focused'?'text-field__text-input text-field__text-input_hovered-focused':'text-field__text-input'}`)
             +text-input({ placeholder: options.placeholder, value: options.value, classes: options.classes })
