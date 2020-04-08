@@ -1,0 +1,32 @@
+include ../text-input/text-input
+include ../header-element/header-element
+include ../birdie-element/birdie-element
+
+
+mixin dropdown(properties={})
+    div(class="dropdown")
+        +header-element( { hasHeaderDescription: properties.hasHeaderDescription, headerDescription: properties.headerDescription, header: properties.header } )
+        .dropdown__text-input
+            +text-input({ inputPlaceholder: properties.inputPlaceholder, inputType: properties.inputType, inputValue: properties.inputValue, inputClasses: properties.inputClasses })
+            .dropdown__birdie-element
+                +birdie-element
+        ul(class="dropdown__popup")
+            li(class="dropdown__item")
+                p(class="dropdown__header") Взрослые
+                .dropdown__count
+                    .dropdown__button-lesser -
+                    .dropdown__count-value 10
+                    .dropdown__button-greater +
+            li(class="dropdown__item")
+                p(class="dropdown__header") Дети
+                .dropdown__count
+                    .dropdown__button-lesser -
+                    .dropdown__count-value 4
+                    .dropdown__button-greater +
+            li(class="dropdown__item")
+                p(class="dropdown__header") Младенцы
+                .dropdown__count
+                    .dropdown__button-lesser -
+                    .dropdown__count-value 0
+                    .dropdown__button-greater +
+            .dropdown__buttons

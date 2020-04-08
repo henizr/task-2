@@ -1,0 +1,97 @@
+@import '../../sass/variables';
+
+.dropdown{
+    &__text-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px; 
+        border: 1px solid $dark-shade-25;
+        border-radius: 4px;
+        &:hover,
+        &:focus-within{
+            border: 1px solid $dark-shade-50;
+        }
+      }
+    &__birdie-element{
+        line-height: 1;
+        margin-right: 9px;
+        cursor: pointer;
+    }
+    &__popup{
+        display: none;
+        box-sizing: border-box;
+        position: absolute;
+        top: 63px;
+        width: 100%;
+        padding: 4px 5px 1.3px 1.4px;
+        background: #FFF;
+        z-index: 10000;
+        border: 1px solid $dark-shade-50;
+        border-radius: 0 0 4px 4px;
+      }
+      &__text-input_opened{
+        border: 1px solid $dark-shade-50;
+        border-radius: 4px 4px 0 0;
+      }
+      &__popup_visible{
+        display: block;
+      }
+      &__item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.2px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+      &__count{
+        width: 94px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &__count-value{
+        font-weight: bold;
+      }
+      &__button-lesser{
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid grey;
+        cursor: pointer;
+      }
+      &__button-greater{
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid grey;
+        cursor: pointer;
+      }
+      &__buttons{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 22px;
+      }
+}
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
