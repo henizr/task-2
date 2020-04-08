@@ -1,4 +1,5 @@
 include ../../blocks/text-field/text-field
+include ../../blocks/birdie-element/birdie-element
 
 <!DOCTYPE html>
 html(lang="en", class="root")
@@ -18,3 +19,12 @@ html(lang="en", class="root")
                         type: 'email',
                         value: '',
                         classes: ''})  
+            +text-field({hasHeaderDescription: true,
+                        hasHeader: true,
+                        description: 'hover / focus', 
+                        header: 'text field', 
+                        placeholder: 'email', 
+                        condition: '',
+                        type: 'text',
+                        value: 'This is pretty awesome',
+                        classes: ''})
