@@ -1,5 +1,7 @@
 include ../../blocks/text-field/text-field
 include ../../blocks/birdie-element/birdie-element
+include ../../blocks/dropdown/dropdown
+
 
 <!DOCTYPE html>
 html(lang="en", class="root")
@@ -10,21 +12,32 @@ html(lang="en", class="root")
         title Form elements
     body(class="form-elements")
         .form-elements__col-1
-            +text-field({hasHeaderDescription: true,
-                        hasHeader: true,
-                        description: 'default', 
-                        header: 'text field', 
-                        placeholder: 'email', 
-                        condition: '',
-                        type: 'email',
-                        value: '',
-                        classes: ''})  
-            +text-field({hasHeaderDescription: true,
-                        hasHeader: true,
-                        description: 'hover / focus', 
-                        header: 'text field', 
-                        placeholder: 'email', 
-                        condition: '',
-                        type: 'text',
-                        value: 'This is pretty awesome',
-                        classes: ''})
+            +text-field({
+                hasHeaderDescription: true,
+                hasHeader: true,
+                headerDescription: 'default', 
+                header: 'text field', 
+                inputPlaceholder: 'email', 
+                inputCondition: '',
+                inputType: 'email',
+                inputValue: '',
+                inputClasses: ''})  
+            +text-field({
+                hasHeaderDescription: true,
+                hasHeader: true,
+                headerDescription: 'hover / focus', 
+                header: 'text field', 
+                inputPlaceholder: 'email', 
+                inputCondition: '',
+                inputType: 'text',
+                inputValue: 'This is pretty awesome',
+                inputClasses: ''})
+            +dropdown({
+                hasHeaderDescription: true,
+                headerDescription: 'default',
+                header: 'dropdown',
+                inputPlaceholder: '',
+                inputType: 'text',
+                inputValue: '',
+                inputClasses: '',
+            })

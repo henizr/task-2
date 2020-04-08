@@ -1,30 +1,19 @@
 include ../text-input/text-input
 include ../header-element/header-element
 //-
-  Опции миксина text-field:
+  Свойства миксина text-field:
 
-    options.hasHeaderDescription - Наличие описания (boolean)
-    options.hasHeader - Наличие заголовка (boolean)
-    options.description -  Описание (string)
-    options.header -  Заголовок (string)
-    options.placeholder - Текст placeholder-а (string) 
-    options.value - Значение по умолчанию (string)
-    options.type - Тип input- a (string)
+    properties.hasHeaderDescription - Наличие описания (boolean)
+    properties.hasHeader - Наличие заголовка (boolean)
+    properties.description -  Описание (string)
+    properties.header -  Заголовок (string)
+    properties.placeholder - Текст placeholder-а (string) 
+    properties.value - Значение по умолчанию (string)
+    properties.type - Тип input- a (string)
 
-  Пример использования:
 
-    +text-field({ 
-    hasHeaderDescription: true,
-    hasHeader: true,
-    description: 'default', 
-    header: 'text field', 
-                placeholder: 'email', 
-                condition: '',
-                type: 'email'
-                value: ''})      
-
-mixin text-field(options)
+mixin text-field(properties)
     .text-field
-        +header-element( { hasHeaderDescription: options.hasHeaderDescription, description: options.description, header: options.header } )
-        div(class=`${options.condition==='hovered-focused'?'text-field__text-input text-field__text-input_hovered-focused':'text-field__text-input'}`)
-            +text-input({ placeholder: options.placeholder, type: options.type, value: options.value, classes: options.classes })
+        +header-element( { hasHeaderDescription: properties.hasHeaderDescription, headerDescription: properties.headerDescription, header: properties.header } )
+        div(class=`${properties.inputCondition==='hovered-focused'?'text-field__text-input text-field__text-input_hovered-focused':'text-field__text-input'}`)
+            +text-input({ inputPlaceholder: properties.inputPlaceholder, inputType: properties.inputType, inputValue: properties.inputValue, inputClasses: properties.inputClasses })

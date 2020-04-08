@@ -3,16 +3,16 @@
   Опции миксина header-element:
 
      options.hasHeaderDescription - Наличие описания (boolean)
-     options.description - Текст описания (string)
+     options.headerDescription - Текст описания (string)
      options.header - Текст заголовка (string)
 
     Пример использования:
 
-        +header-element( { hasHeaderDescription: true, description: 'default', header: 'text field' } )
+        +header-element( { hasHeaderDescription: true, headerDescription: 'default', header: 'text field' } )
 
 
 mixin header-element(options)
     .header-element
         h3(class="header-element__header") #{options.header}
         if options.hasHeaderDescription 
-            p(class="header-element__description") #{options.description}
+            p(class="header-element__description") #{options.headerDescription}
