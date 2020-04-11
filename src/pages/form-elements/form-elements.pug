@@ -1,9 +1,12 @@
 include ../../blocks/text-field/text-field
+include ../../blocks/subscription-text-field/subscription-text-field
 include ../../blocks/masked-text-field/masked-text-field
 include ../../blocks/birdie-element/birdie-element
 include ../../blocks/dropdown/dropdown
 include ../../blocks/date-dropdown/date-dropdown
 include ../../blocks/filter-date-dropdown/filter-date-dropdown
+
+
 
 
 <!DOCTYPE html>
@@ -89,3 +92,14 @@ html(lang="en", class="root")
                     inputValue: '19 авг - 23 авг',
                     inputClasses: '', 
                 })
+            .form-elements__subscription-text-field
+                +subscription-text-field({
+                    hasHeaderDescription: false,
+                    hasHeader: true,
+                    headerDescription: '', 
+                    header: 'subscription text field', 
+                    inputPlaceholder: 'Email', 
+                    inputCondition: '',
+                    inputType: 'email',
+                    inputValue: '',
+                    inputClasses: ''})
