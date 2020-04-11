@@ -1,0 +1,19 @@
+include ../text-input/text-input
+include ../header-element/header-element
+//-
+  Свойства миксина masked-text-field:
+
+    properties.hasHeaderDescription - Наличие описания (boolean)
+    properties.hasHeader - Наличие заголовка (boolean)
+    properties.description -  Описание (string)
+    properties.header -  Заголовок (string)
+    properties.placeholder - Текст placeholder-а (string) 
+    properties.value - Значение по умолчанию (string)
+    properties.type - Тип input- a (string)
+
+
+mixin masked-text-field(properties)
+    div(class="js-masked-text-field masked-text-field")
+        +header-element( { hasHeaderDescription: properties.hasHeaderDescription, headerDescription: properties.headerDescription, header: properties.header } )
+        div(class=`${properties.inputCondition==='hovered-focused'?'masked-text-field__text-input masked-text-field__text-input_hovered-focused':'masked-text-field__text-input'}`)
+            +text-input({ inputPlaceholder: properties.inputPlaceholder, inputType: properties.inputType, inputValue: properties.inputValue, inputClasses: properties.inputClasses })
