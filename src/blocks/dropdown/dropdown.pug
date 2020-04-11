@@ -3,7 +3,7 @@ include ../header-element/header-element
 include ../birdie-element/birdie-element
 
 
-mixin dropdown(properties={})
+mixin dropdown(properties)
     div(class="dropdown")
         +header-element( { hasHeaderDescription: properties.hasHeaderDescription, headerDescription: properties.headerDescription, header: properties.header } )
         .dropdown__text-input

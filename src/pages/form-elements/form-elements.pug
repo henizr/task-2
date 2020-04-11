@@ -1,4 +1,5 @@
 include ../../blocks/text-field/text-field
+include ../../blocks/masked-text-field/masked-text-field
 include ../../blocks/birdie-element/birdie-element
 include ../../blocks/dropdown/dropdown
 
@@ -12,32 +13,46 @@ html(lang="en", class="root")
         title Form elements
     body(class="form-elements")
         .form-elements__col-1
-            +text-field({
-                hasHeaderDescription: true,
-                hasHeader: true,
-                headerDescription: 'default', 
-                header: 'text field', 
-                inputPlaceholder: 'email', 
-                inputCondition: '',
-                inputType: 'email',
-                inputValue: '',
-                inputClasses: ''})  
-            +text-field({
-                hasHeaderDescription: true,
-                hasHeader: true,
-                headerDescription: 'hover / focus', 
-                header: 'text field', 
-                inputPlaceholder: 'email', 
-                inputCondition: '',
-                inputType: 'text',
-                inputValue: 'This is pretty awesome',
-                inputClasses: ''})
-            +dropdown({
-                hasHeaderDescription: true,
-                headerDescription: 'default',
-                header: 'dropdown',
-                inputPlaceholder: '',
-                inputType: 'text',
-                inputValue: '',
-                inputClasses: '',
-            })
+            .form-elements__text-field
+                +text-field({
+                    hasHeaderDescription: true,
+                    hasHeader: true,
+                    headerDescription: 'default', 
+                    header: 'text field', 
+                    inputPlaceholder: 'email', 
+                    inputCondition: '',
+                    inputType: 'email',
+                    inputValue: '',
+                    inputClasses: ''})  
+            .form-elements__text-field
+                +text-field({
+                    hasHeaderDescription: true,
+                    hasHeader: true,
+                    headerDescription: 'hover / focus', 
+                    header: 'text field', 
+                    inputPlaceholder: 'email', 
+                    inputCondition: '',
+                    inputType: 'text',
+                    inputValue: 'This is pretty awesome',
+                    inputClasses: ''})
+            .form-elements__dropdown
+                +dropdown({
+                    hasHeaderDescription: true,
+                    headerDescription: 'default',
+                    header: 'dropdown',
+                    inputPlaceholder: '',
+                    inputType: 'text',
+                    inputValue: 'Сколько гостей',
+                    inputClasses: '', 
+                })
+            .form-elements__masked-text-field
+                +masked-text-field({
+                    hasHeaderDescription: true,
+                    hasHeader: true,
+                    headerDescription: 'default', 
+                    header: 'masked text field', 
+                    inputPlaceholder: 'ДД.ММ.ГГГГ', 
+                    inputCondition: '',
+                    inputType: 'text',
+                    inputValue: '',
+                    inputClasses: ''})
