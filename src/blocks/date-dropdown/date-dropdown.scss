@@ -1,0 +1,22 @@
+@import '../../sass/variables';
+
+.date-dropdown{
+    &__text-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px; 
+        border: 1px solid $dark-shade-25;
+        border-radius: 4px;
+        &:hover,
+        &:focus-within{
+            border: 1px solid $dark-shade-50;
+        }
+      }
+    &__birdie-element{
+        line-height: 1;
+        margin-right: 9px;
+        cursor: pointer;
+    }
+}

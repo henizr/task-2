@@ -20,4 +20,11 @@
     &__masked-text-field{
         margin-bottom: 20px;
     }
+    &__date-dropdown{
+        flex-basis: 150px;
+    }
+    &__date-dropdowns{
+        display: flex;
+        justify-content: space-between;
+    }
 }

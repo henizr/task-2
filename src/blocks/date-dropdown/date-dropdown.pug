@@ -1,0 +1,12 @@
+include ../text-input/text-input
+include ../header-element/header-element
+include ../birdie-element/birdie-element
+
+
+mixin date-dropdown(properties)
+    div(class="js-date-dropdown date-dropdown")
+        +header-element( { hasHeaderDescription: properties.hasHeaderDescription, headerDescription: properties.headerDescription, header: properties.header } )
+        .date-dropdown__text-input
+            +text-input({ inputPlaceholder: properties.inputPlaceholder, inputType: properties.inputType, inputValue: properties.inputValue, inputClasses: properties.inputClasses })
+            .date-dropdown__birdie-element
+                +birdie-element
